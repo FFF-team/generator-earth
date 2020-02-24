@@ -1,0 +1,56 @@
+<view wx:for="{{processList}}"  wx:key="index" class="timeline">
+  <view class="node-wrap">
+      <view class="left">
+        <view class="icon {{item.status}}"></view>
+        <view class="stick" wx:if="{{index !== processList.length-1}}"></view>
+      </view>
+      <view class="right">
+          <view>
+            <block wx:if="{{item.status === 'doing' }}">
+              <view class="name blue-color">
+                {{item.name}}
+              </view>
+              <view class="time grey-color">
+                {{item.time}}
+              </view>
+            </block>
+            <block wx:elif="{{item.status === 'success' }}">
+              <view class="name light-black-color">
+                {{item.name}}
+              </view>
+              <view class="time grey-color">
+                {{item.time}}
+              </view>
+            </block>
+            <view wx:elif="{{item.status === 'fail' }}" class="">
+              <view>
+                <view class="name orange-color">
+                  {{item.name}}
+                </view>
+                <view class="time lightgrey-color">
+                  {{item.time}}
+                </view>
+              </view>
+            </view>
+            <block wx:else>
+              <view class="name lightgrey-color">
+                {{item.name}}
+              </view>
+              <view class="time lightgrey-color">
+                {{item.time}}
+              </view>
+            </block>
+          </view>
+          <view wx:if="{{item.status === 'fail' }}" data-remark="{{item.remark}}" class="fail-reason" bindtap="onShowModel">
+            <view class="icon"></view>
+            驳回原因
+          </view>
+          <view wx:if="{{item.isContract}}">
+            <view class="tel" bindtap="onCall">
+              <view class="icon"></view>
+                联系客户
+            </view>
+          </view>
+      </view>
+  </view>
+</view>

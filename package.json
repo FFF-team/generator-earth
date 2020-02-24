@@ -1,0 +1,27 @@
+{
+  "name": "generator-earth",
+  "version": "2.2.3",
+  "files": [
+    "app",
+    "component",
+    "project",
+    "_libs",
+    "common",
+    "update"
+  ],
+  "main": "app/index.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "inquirer": "^6.2.2",
+    "mkdirp": "^0.5.1",
+    "npm-updater": "^3.0.3",
+    "shelljs": "^0.7.8",
+    "yeoman-generator": "^3.0.0"
+  },
+  "repository": "git@github.com:FFF-team/generator-earth.git",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FFF-team/generator-earth/issues"
+  },
+  "homepage": "https://github.com/FFF-team/generator-earth#readme"
+}

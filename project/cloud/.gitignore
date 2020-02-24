@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+dist/
+logs/
+nodejslogs/
+npm-debug.log*
+**/*.swp
+build/
+.project
+.idea
+.vscode/
+package-lock.json

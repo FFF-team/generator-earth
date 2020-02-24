@@ -1,0 +1,59 @@
+{
+    "code": 0,
+    "msg": "get成功",
+    "data": {
+        "name": "jiajianrong",
+        "tel": "18612244125",
+        "defaultMenu": "/queryTransaction",
+        "role": [
+            {
+                "name": "资产方",
+                "key": "asset",
+                "icon": "asset",
+                "menu": [
+                    {
+                        "name": "资产方管理",
+                        "key": "/asset/assetMgmt"
+                    },
+                    {
+                        "name": "产品管理",
+                        "key": "/asset/prod"
+                    },
+                    {
+                        "name": "资金通道配置",
+                        "key": "/asset/assetConf"
+                    }
+                ]
+            },
+            {
+                "name": "资金方",
+                "key": "capital",
+                "icon": "capital",
+                "menu": [
+                    {
+                        "name": "资金方管理",
+                        "key": "/capital/capitalMgmt"
+                    },
+                    {
+                        "name": "产品管理",
+                        "key": "/capital/prod"
+                    },
+                    {
+                        "name": "资金通道配置",
+                        "key": "/capital/capitalConf"
+                    }
+                ]
+            },
+            {
+                "name": "查询交易",
+                "key": "/queryTransaction",
+                "icon": "queryTransaction"
+            },
+            {
+                "name": "对账管理",
+                "key": "/reconciliation",
+                "icon": "reconciliation"
+            }
+        ]
+    }
+}

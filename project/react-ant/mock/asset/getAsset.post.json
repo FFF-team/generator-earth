@@ -1,0 +1,251 @@
+{
+    "code": 0,
+    "msg": "post成功",
+    "data": {
+        "total": 22,
+        "list": [
+            {
+                "id": 0,
+                "assetCode": "1",
+                "assetName": "接口1",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 1,
+                "assetCode": "2",
+                "assetName": "保利国际2",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 2,
+                "assetCode": "3",
+                "assetName": "保利国际3",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 3,
+                "assetCode": "4",
+                "assetName": "保利国际4",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 4,
+                "assetCode": "5",
+                "assetName": "保利国际5",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 5,
+                "assetCode": "6",
+                "assetName": "保利国际6",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 6,
+                "assetCode": "7",
+                "assetName": "保利国际7",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 7,
+                "assetCode": "8",
+                "assetName": "保利国际8",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 8,
+                "assetCode": "9",
+                "assetName": "保利国际9",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 9,
+                "assetCode": "10",
+                "assetName": "保利国际10",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 10,
+                "assetCode": "1",
+                "assetName": "接口11",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 11,
+                "assetCode": "2",
+                "assetName": "保利国际12",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 12,
+                "assetCode": "3",
+                "assetName": "保利国际13",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 13,
+                "assetCode": "4",
+                "assetName": "保利国际14",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 14,
+                "assetCode": "5",
+                "assetName": "保利国际15",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 15,
+                "assetCode": "6",
+                "assetName": "保利国际16",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 16,
+                "assetCode": "17",
+                "assetName": "保利国际17",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 17,
+                "assetCode": "17",
+                "assetName": "保利国际18",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 18,
+                "assetCode": "18",
+                "assetName": "保利国际19",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 19,
+                "assetCode": "19",
+                "assetName": "保利国际20",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 20,
+                "assetCode": "20",
+                "assetName": "接口21",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            },
+            {
+                "id": 21,
+                "assetCode": "21",
+                "assetName": "保利国际22",
+                "contract": "财务部",
+                "contractDate": "1988-08-12 08:07:08",
+                "contacts": "非必填",
+                "contactsPhone": "13812345678",
+                "createDate": "2017-09-19 00:00:00",
+                "operator": "李四"
+            }
+        ]
+    }
+}

@@ -1,0 +1,49 @@
+.cm-tab-scroll {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+
+.tabs {
+  position: relative;
+  color: #999;
+  display: flex;
+}
+
+.tabs .item {
+  flex: 1;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  transition: color 0.3s ease-in-out;
+}
+
+.tabs .item.action {
+  color: #333;
+}
+
+.tabs.tabs-scroll {
+  white-space: nowrap;
+  display: block;
+}
+
+.tabs.tabs-scroll .item {
+  flex: initial;
+  display: inline-block;
+  padding: 0 30rpx;
+}
+
+.tab-line {
+  background-color: #3F82FD;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4rpx;
+  width: 0rpx;
+}
+
+.tab-line.transition {
+  transition: width 0.3s, transform 0.3s;
+}

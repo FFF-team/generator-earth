@@ -1,0 +1,1 @@
+export const MOD_PREFIX = 'PURE_SAGA'

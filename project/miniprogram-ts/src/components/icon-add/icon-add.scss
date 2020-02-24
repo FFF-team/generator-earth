@@ -1,0 +1,30 @@
+.cm-icon-add {
+    border-radius: 50%;
+    position: relative;
+    border: 4rpx solid #dcdcdc;
+    box-sizing: border-box;
+    height: 52rpx;
+    width: 52rpx;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        background-color: #dcdcdc;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &:before {
+        height: 50%;
+        width: 4rpx;
+    }
+    &:after {
+        height: 4rpx;
+        width: 50%;
+    }
+}
+
+// 上传进度 
+// 图片上传张数
+// 弹窗

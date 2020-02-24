@@ -1,0 +1,50 @@
+{
+    "name": "<%= name %>",
+    "version": "<%= version %>",
+    "private": true,
+    "author": {
+        "name": "<%= author %>",
+        "email": "<%= email %>"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://gitlab.xxx.com/groups/<%= groupName %>/<%= name %>"
+    },
+    "group": "<%= groupName %>",
+    "type": "<%= frameType %>",
+    "keywords": [
+        "earth",
+        "react",
+        "<%= name %>"
+    ],
+    "dependencies": {
+        "antd": "3.1.0",
+        "lodash": "4.17.5",
+        "moment": "2.22.1",
+        "prop-types": "15.5.10",
+        "query-string": "^5.0.1",
+        "react": "16.4.2",
+        "react-dom": "16.4.2",
+        "react-loadable": "^5.5.0",
+        "react-router-dom": "^4.2.2",
+        "react-redux": "^5.0.6",
+        "redux": "^3.7.2",
+        "redux-saga": "^1.0.2",
+        "redux-thunk": "^2.2.0"
+    },
+    "devDependencies": {
+        "earth-scripts": "^1.0.9"
+    },
+    "scripts": {
+        "start": "earth-scripts start",
+        "build": "earth-scripts build",
+        "update": "earth-scripts update",
+        "test": "earth-scripts test --env=jsdom",
+        "mock": "earth-scripts mock"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "mockRoot": "mock_server.js",
+    "proxy": "http://127.0.0.1:8004"
+}

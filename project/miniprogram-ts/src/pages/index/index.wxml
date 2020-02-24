@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view><timeline></timeline></view>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <navigator url="../demo/list/index">demo-列表页</navigator>
+  <navigator url="../demo/imgs/index">demo-图片上传/预览/删除</navigator>
+  <navigator url="../demo/detail/detail">demo-进度条</navigator>
+</view>

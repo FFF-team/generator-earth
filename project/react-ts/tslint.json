@@ -1,0 +1,19 @@
+{
+    "defaultSeverity": "warning",
+    "extends": [
+        "tslint:recommended",
+        "tslint-react",
+        "tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "rules": {
+        "space-before-function-paren": false,
+        "ordered-imports": false,
+        "object-literal-sort-keys": false,
+        "trailing-comma": false,
+        "quotemark": [true, "single", "jsx-double"],
+        "eofline": false,
+        "no-string-literal":false
+    },
+    "rulesDirectory": ["app", "config"]
+}

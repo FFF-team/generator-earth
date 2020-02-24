@@ -1,0 +1,6 @@
+miniprogram/
+JestMock/
+typings/
+scripts/
+src/**/*.js
+mock/

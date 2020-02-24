@@ -1,0 +1,56 @@
+<view class="my-class">
+	<view class="success {{dSuccessShow ? 'show' : ''}} {{dSuccessTran ? 'tran' : ''}}" style="top: {{topHegiht}}rpx">
+		<view class="info">刷新成功</view>
+	</view>
+	<movable-area class="movable-area">
+		<movable-view
+		 class="movable-view"
+		 direction="vertical"
+		 y="{{dMove}}"
+		 disabled="{{dRefreshStatus >= 3}}"
+		 bindchange="change"
+		 bindtouchend="touchend"
+		>
+			<scroll-view
+			 class="scroll-view"
+			 style="padding-top: {{topHegiht}}rpx;"
+			 scroll-y="{{dRefreshStatus == 1}}"
+			 scroll-top="{{dScrollTop}}"
+			 enable-back-to-top="{{enableBackToTop}}"
+			 bindscroll="scroll"
+			 bindscrolltolower="more"
+			>
+				<view id="refresh" class="scroll-refresh {{dSuccessShow ? 'visibility-hidden' : ''}}">
+					<view class="scroll-loading">
+						<view wx:if="{{dRefreshStatus == 1 || dRefreshStatus == 2}}" class="{{dRefreshStatus == 2 ? 'rotate' : ''}} arrow" />
+						<view wx:if="{{dRefreshStatus == 3}}" class="loading">
+							<block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="*this">
+								<view class="loading-item" />
+							</block>
+						</view>
+						<view class="text" wx:if="{{dRefreshStatus == 1}}">下拉刷新</view>
+						<view class="text" wx:elif="{{dRefreshStatus == 2}}">松开更新</view>
+						<view class="text" wx:elif="{{dRefreshStatus == 3}}">加载中...</view>
+					</view>
+				</view>
+				<slot/>
+				<view wx:if="{{emptyShow}}" class="empty">
+					<image class="empty-image" src="{{emptyUrl}}" />
+					<view class="empty-text">{{emptyText}}</view>
+				</view>
+				<view wx:if="{{dOverOnePage}}" class="scroll-bottom">
+					<view class="scroll-loading" wx:if="{{end}}">已全部加载</view>
+					<view class="scroll-loading" wx:else>
+						<view class="loading">
+							<block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="*this">
+								<view class="loading-item" />
+							</block>
+						</view>
+						<view class="text">加载中...</view>
+					</view>
+				</view>
+			</scroll-view>
+		</movable-view>
+	</movable-area>
+</view>
+

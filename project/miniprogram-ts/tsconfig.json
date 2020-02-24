@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "ES5",
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "removeComments": true,
+    "pretty": true,
+    "strictPropertyInitialization": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015"
+    ],
+    "typeRoots": [
+      "./typings"
+    ],
+    "types": [
+      "node"
+    ],
+    "baseUrl":".",
+    "paths":{
+      "ROOT_SOURCE/*": ["./*"],
+      "SRC/*":["./src/*"],
+      "UTILS/*":["./src/utils/*"],
+      "PAGES/*": ["./src/pages/*"],
+      "COMPONENTS/*": ["./src/components/*"],
+      "IMGS/*": ["./src/imgs/*"],
+      "CONFIGS/*": ["./src/config/*"],
+      "LIBS/*": ["./src/lib/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts", "src/lib/wos_jssdk_v1.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "typings",
+    "src/lib/*"
+  ]
+}

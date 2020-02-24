@@ -1,0 +1,5 @@
+{
+    "GATEWAY_SERVER": "http://gatewaymanager.69v5.cn",
+    
+    "LOG_DIR": "./nodejslogs"
+}

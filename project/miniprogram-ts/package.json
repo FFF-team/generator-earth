@@ -1,0 +1,69 @@
+{
+  "name": "miniprogram-ts-quickstart",
+  "version": "1.0.0",
+  "description": "微信小程序TS脚手架",
+  "scripts": {
+    "compile": "npm run lint && gulp --gulpfile scripts/gulpfile.js",
+    "tsc": "node ./node_modules/typescript/lib/tsc.js",
+    "start": "cross-env NODE_ENV='dev' gulp --gulpfile scripts/gulpfile.js",
+    "build:pro": "cross-env NODE_ENV='prod' npm run compile ",
+    "mock": "node mock/run.js",
+    "lint-w": "esw src --clear -w --ext .ts",
+    "lint": "esw src --ext .ts",
+    "fix-src": "esw src --fix --ext .ts",
+    "fix": "esw config/* --fix --ext .js",
+    "test": "jest",
+    "autoTest": "node scripts/autoTest.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.1.0",
+    "@typescript-eslint/parser": "^1.1.0",
+    "chalk": "^3.0.0",
+    "cross-env": "^5.2.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "del": "^5.0.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-typescript": "^0.14.0",
+    "eslint-watch": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-miniprogram-path-alias": "^0.3.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-inject": "^5.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
+    "jest": "^24.9.0",
+    "json-server": "^0.15.0",
+    "koa": "^2.11.0",
+    "miniprogram-api-typings": "^2.8.3-1",
+    "miniprogram-automator": "^0.5.9",
+    "miniprogram-simulate": "^1.1.4",
+    "node-sass": "^4.12.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.14"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testURL": "https://jest.test",
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  }
+}

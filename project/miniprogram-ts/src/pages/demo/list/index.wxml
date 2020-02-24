@@ -1,0 +1,35 @@
+<view class="top-wrap">
+	<cm-tab
+	 tabList="{{dTabList}}"
+	 tabCur="{{dTabCur}}"
+	 scroll="{{true}}"
+	 my-class="t-cl"
+	 bind:change="toggleTab"
+	/>
+</view>
+
+<swiper
+ style="height: 100vh"
+ current="{{dTabCur}}"
+ duration="{{dDuration}}"
+ bind:animationfinish="swipeChange"
+>
+	<swiper-item wx:for="{{dCategoryData}}" wx:key="unique">
+		<cm-scroll
+		 requesting="{{item.requesting}}"
+		 topHegiht="{{110}}"
+		 end="{{item.end}}"
+		 emptyShow="{{item.listData.length === 0}}"
+		 bind:refresh="refresh"
+		 bind:more="more"
+		>
+			<view class="cells">
+				<view class="cell" wx:for="{{item.listData}}" wx:key="title">
+					<view class="name">{{item.title}}</view>
+					<view class="des">{{item.description}}</view>
+				</view>
+			</view>
+		</cm-scroll>
+	</swiper-item>
+</swiper>
+

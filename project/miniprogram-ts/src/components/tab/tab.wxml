@@ -1,0 +1,20 @@
+<scroll-view
+ class="cm-tab-scroll my-class"
+ scroll-x="{{dScrolling}}"
+ scroll-with-animation="{{dScrolling}}"
+ scroll-left="{{dScrollLeft}}"
+>
+	<view class="tabs {{scroll ? 'tabs-scroll' : ''}}" style="height: {{size}}rpx">
+		<view
+		 wx:for="{{tabList}}"
+		 wx:key="*this"
+		 class="item {{index === tabCur ? 'action': ''}}"
+		 data-index="{{index}}"
+		 bind:tap="toggleTab"
+		>
+			<view class="content">{{item}}</view>
+		</view>
+		<view class="tab-line {{dNeedLineTransition ? 'transition' : ''}}" style="width: {{dLineWidth}}px; transform: translateX({{dLinetranslateX}}px)" />
+	</view>
+</scroll-view>
+

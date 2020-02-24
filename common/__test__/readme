@@ -1,0 +1,15 @@
+### 文件夹测试用例说明
+
+* abs  基本的测试用例写法，介绍些黑盒测试和白盒测试的方法
+* apimock  mock 一个api请求
+* async 测试异步
+* deep 介绍enzyme 三种渲染方式的区别
+* deepevent 介绍 enzyme渲染方式中render 是不可以触发事件的
+* deepspeed 介绍 enzyme 三种渲染方式速度
+* dom 测试dom操作
+* files mock文件，第三方库
+* react-base react测试的几个方面
+* storage 模拟sessionStorage localStorage
+* timers 模拟定时器
+* ty 支持ts tsx 测试
+* component 需要测试的组件

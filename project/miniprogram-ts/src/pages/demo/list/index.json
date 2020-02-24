@@ -1,0 +1,7 @@
+{
+    "disableScroll": true,
+    "usingComponents": {
+        "cm-tab": "/components/tab/tab",
+        "cm-scroll": "/components/scroll/scroll"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "nodeapp",
+  "scripts": {
+    "dev": "node index.js",
+    "start": "pm2 start index.js --name=nodeapp",
+    "stop":  "pm2 stop nodeapp",
+    "detect":"pm2 show nodeapp"
+  },
+  "dependencies": {
+    "config": "^1.30.0",
+    "http-proxy": "^1.17.0",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.4",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.2.1"
+  }
+}

@@ -1,0 +1,2 @@
+<!-- /components/index.wmxl -->
+<view class="index">{{prop}}</view>
