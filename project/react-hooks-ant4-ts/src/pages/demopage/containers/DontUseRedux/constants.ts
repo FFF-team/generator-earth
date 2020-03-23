@@ -1,0 +1,1 @@
+export const MOD_PREFIX = 'DONT_USE_REDUX'

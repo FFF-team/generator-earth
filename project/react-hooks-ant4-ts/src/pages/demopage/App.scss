@@ -1,0 +1,104 @@
+.ant-table {
+    tbody>tr>td,
+    tfoot>tr>td,
+    tfoot>tr>th,
+    thead>tr>th {
+        padding: 8px;
+        font-size: 12px;
+    }
+    tbody>tr>td {
+        white-space: pre;
+        overflow-wrap: normal;
+    }
+}
+
+.ant-form {
+    .ant-form-item {
+        label {
+            color: #666;
+            font-size: 12px;
+        }
+    }
+    &.ant-form-inline {
+        .ant-form-item {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    &.ant-form-horizontal {
+        .ant-form-item {
+            .ant-form-item-label {
+                min-width: 80px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.ui-background {
+    background-color: #fff;
+    padding: 12px;
+    &+.ui-background {
+        margin-top: 12px;
+    }
+}
+
+.ui-logo {
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.ui-align-center {
+    text-align: center;
+}
+
+.ui-btn-group {
+    .ant-btn {
+        position: relative;
+        border-radius: 0;
+        border-left-width: 0;
+        &:first-child {
+            border-radius: 2px 0 0 2px;
+            border-left-width: 1px;
+            &:after {
+                display: none;
+            }
+        }
+        &:last-child {
+            border-radius: 0 2px 2px 0;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            bottom: 0;
+            left: -1px;
+            width: 0;
+            border-left-width: 1px;
+            border-left-style: inherit;
+            border-left-color: inherit;
+            transition-property: opacity;
+            transition-duration: inherit;
+            transition-timing-function: inherit;
+        }
+        &:active::after,
+        &:focus::after,
+        &:hover::after {
+            opacity: 1;
+            border-left-color: #40a9ff;
+        }
+        &:active::after {
+            border-left-color: #096dd9;
+        }
+        &[ant-click-animating-without-extra-node=true]::after {
+            animation: none;
+            opacity: 1;
+        }
+    }
+}

@@ -147,7 +147,12 @@ module.exports = class extends Generator {
                 {
                     name: 'React-ant-ts',
                     value: 'react-ant-ts'
-                }],
+                },
+                {
+                    name: 'React-hooks-ant4-ts',
+                    value: 'react-hooks-ant4-ts'
+                },
+            ],
             when: answer => answer.projectType === 'pc'
 
         }, {
@@ -229,7 +234,7 @@ module.exports = class extends Generator {
                 return /^\d+\.\d+\.\d+$/.test(input.trim()) || '请输入合法的版本号!';
             }
 
-        }, 
+        },
         // jiajianrong 20200122 去掉自动安装
         /*{
 
@@ -424,6 +429,7 @@ module.exports = class extends Generator {
                 break;
 
             case 'react-ant-ts':
+            case 'react-hooks-ant4-ts':
 
                 tplFile = `${this.frameType}`;
 
@@ -449,10 +455,10 @@ module.exports = class extends Generator {
                 this._copyReactCommonFiles({
                     outPutProjectFolder: outPutUrl
                 });
-                
+
 
                 break;
-            
+
             //case 'react-ant-multi-pages':
             case 'miniprogram-ts':
 
@@ -475,24 +481,24 @@ module.exports = class extends Generator {
                         flexibleStr: ''
                     }
                 );
-                
+
                 this.fs.copyTpl(
                     this.templatePath(`./.eslintignore`),
                     outPutUrl + '.eslintignore'
                 );
-                
+
                 this.fs.copyTpl(
                     this.templatePath(`./.eslintrc.js`),
                     outPutUrl + '.eslintrc.js'
                 );
-                
+
                 this.fs.copyTpl(
                     this.templatePath(`./.gitignore`),
                     outPutUrl + '.gitignore'
                 );
 
                 break;
-                
+
 
             default:
 
