@@ -38,7 +38,7 @@ export function formatParams({
             if (v === undefined) {
                 return
             }
-            if ([null, NaN].includes(v)) {
+            if ([null, NaN].indexOf(v) > -1) {
                 v = ''
             }
 
