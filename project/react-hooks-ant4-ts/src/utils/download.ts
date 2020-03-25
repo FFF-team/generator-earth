@@ -63,7 +63,7 @@ export const downloadByIframe = (url: string, time = 1) => {
         const el = iframe.contentWindow || iframe.contentDocument
         if (!el) return
         try {
-            // eslint-disable-next-line no-unused-expressions
+            // eslint-disable-next-line
             el.location.href
         } catch (err) {
             // err:SecurityError: Blocked a frame with origin 'http://*********' from accessing a cross-origin frame.

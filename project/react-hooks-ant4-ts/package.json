@@ -21,6 +21,8 @@
     ],
     "dependencies": {
         "antd": "4.0.2",
+        "react": "16.13.0",
+        "react-dom": "16.13.0",
         "redux-saga": "1.0.2"
     },
     "devDependencies": {
@@ -39,7 +41,10 @@
         "mock": "earth-scripts mock"
     },
     "eslintConfig": {
-        "extends": "react-app"
+        "extends": "react-app",
+        "rules": {
+            "jsx-a11y/anchor-is-valid": 0
+        }
     },
     "mockRoot": "mock_server.js",
     "proxy=>moved-to-/src/setupProxy.js": "http://127.0.0.1:8004"
