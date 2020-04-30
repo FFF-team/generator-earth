@@ -8,4 +8,5 @@ module.exports = function (app) {
 
     app.use(proxy('/nodeapi', { target: proxy_local }));
     app.use(proxy('/asset', { target: proxy_local }));
+    app.use(proxy('/test', { target: proxy_local }));
 };

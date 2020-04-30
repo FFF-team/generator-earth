@@ -1,4 +1,4 @@
-const projGlobalConfig = require('../src/projGlobalConfig.ts')
+const projGlobalConfig = require('../src/projGlobalConfig.js')
 
 
 const CURRENT_PAGE = projGlobalConfig.CURRENT_PAGE

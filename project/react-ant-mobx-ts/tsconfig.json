@@ -1,13 +1,10 @@
 {
     "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
-        "outDir": "build/dist",
-        "module": "commonjs",
-        "target": "es5",
-        "lib": [
-            "dom",
-            "es2015"
-        ],
+        "module": "esnext",
+        "target": "es6",
+        "lib": ["dom","es2015"],
         "sourceMap": true,
         "allowJs": true,
         "jsx": "react",
@@ -17,11 +14,11 @@
         "noImplicitReturns": true,
         "noImplicitThis": true,
         "noImplicitAny": false,
+        "strict": true,
         "strictNullChecks": true,
         "suppressImplicitAnyIndexErrors": true,
         "noUnusedLocals": true,
         "experimentalDecorators": true,
-        /* Enables experimental support for ES7 decorators. */
         "emitDecoratorMetadata": true,
         "paths": {
             "ROOT_SOURCE/*": [
@@ -38,11 +35,8 @@
     "exclude": [
         "node_modules",
         "build",
-        "scripts",
-        "acceptance-tests",
-        "webpack",
-        "jest",
-        "src/setupTests.ts",
-        "index.d.ts"
+        "config",
+        "public",
+        "mock"
     ]
 }
