@@ -1,0 +1,39 @@
+{
+    "code": 0,
+    "msg": "post失败",
+    "data": [
+        {
+            "assetId": 95,
+            "assetName": "Donald",
+            "assetPrdId": 50,
+            "assetPrdName": "Steven",
+            "funderId": 33,
+            "funderName": "Laura",
+            "funderPrdId": 35,
+            "funderPrdName": "Richard",
+            "status": 41
+        },
+        {
+            "assetId": 21,
+            "assetName": "Sharon",
+            "assetPrdId": 57,
+            "assetPrdName": "Daniel",
+            "funderId": 100,
+            "funderName": "Susan",
+            "funderPrdId": 22,
+            "funderPrdName": "George",
+            "status": 45
+        },
+        {
+            "assetId": 100,
+            "assetName": "George",
+            "assetPrdId": 11,
+            "assetPrdName": "Eric",
+            "funderId": 90,
+            "funderName": "Paul",
+            "funderPrdId": 79,
+            "funderPrdName": "Frank",
+            "status": 49
+        }
+    ]
+}

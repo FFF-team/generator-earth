@@ -1,0 +1,1 @@
+export const GLOBAL_LOADING = 'GLOBAL_LOADING'

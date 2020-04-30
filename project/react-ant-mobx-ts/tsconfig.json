@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "build/dist",
+        "module": "commonjs",
+        "target": "es5",
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "sourceMap": true,
+        "allowJs": true,
+        "jsx": "react",
+        "moduleResolution": "node",
+        "rootDir": "src",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "strictNullChecks": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true,
+        "experimentalDecorators": true,
+        /* Enables experimental support for ES7 decorators. */
+        "emitDecoratorMetadata": true,
+        "paths": {
+            "ROOT_SOURCE/*": [
+                "./src/*"
+            ],
+            "INDEX_CONTAINER/*": [
+                "./src/pages/index/containers/*"
+            ],
+            "COMP/*": [
+                "./src/components/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "acceptance-tests",
+        "webpack",
+        "jest",
+        "src/setupTests.ts",
+        "index.d.ts"
+    ]
+}
