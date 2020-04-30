@@ -1,8 +1,0 @@
-{
-    "presets": [
-        ["env", {
-            "modules": false
-        }],
-        "react-app"
-    ]
-}
