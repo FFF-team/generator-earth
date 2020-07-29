@@ -152,6 +152,10 @@ module.exports = class extends Generator {
                     name: 'React-hooks-ant4-ts',
                     value: 'react-hooks-ant4-ts'
                 },
+                {
+                    name: 'React-ant-mobx-ts',
+                    value: 'react-ant-mobx-ts'
+                }
             ],
             when: answer => answer.projectType === 'pc'
 
@@ -430,6 +434,7 @@ module.exports = class extends Generator {
 
             case 'react-ant-ts':
             case 'react-hooks-ant4-ts':
+            case 'react-ant-mobx-ts':
 
                 tplFile = `${this.frameType}`;
 

@@ -23,9 +23,9 @@ export default function Container(props: RouteComponentProps) {
     return (
         <BaseContext.Provider value={{ CONTAINER_ROUTE_PREFIX }}>
         <Switch>
-            <Route path={ROUTE_LIST} component={List} />} />
-            <Route path={ROUTE_ITEM} component={Item} />} />
-            <Route path={ROUTE_ADD}  component={Add} />} />
+            <Route path={ROUTE_LIST} component={List} />
+            <Route path={ROUTE_ITEM} component={Item} />
+            <Route path={ROUTE_ADD}  component={Add} />
             <Redirect to={{pathname: ROUTE_LIST}} />
         </Switch>
         </BaseContext.Provider>

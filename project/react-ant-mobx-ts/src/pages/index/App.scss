@@ -1,0 +1,43 @@
+//@import '~antd/dist/antd.css';
+.ui-background {
+    margin-top: 12px;
+    background-color: #fff;
+    padding: 12px;
+}
+.logo{
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+}
+
+// form
+.ant-form-item-control-wrapper {
+    a {
+        min-width: 30px;
+        display: block;
+    }
+}
+
+.ant-form-item {
+    display: flex;
+}
+
+.form-item-inline {
+    padding-left: 71px;
+     display: flex;
+     .ant-form-item-control-wrapper {
+         width: auto;
+     }
+     div {
+        display: flex;
+     }
+ }
+
+
+// 不知为何spin不出动画
+.ant-spin-spinning .ant-spin-dot{
+    transform: rotate(45deg);
+    animation:antRotate 1.2s infinite linear;
+}

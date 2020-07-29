@@ -1,0 +1,40 @@
+{
+  /**
+    配置集成至 腾讯tslint-config-alloy
+    https://github.com/AlloyTeam/tslint-config-alloy#readme
+  **/
+
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-alloy",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "**/node_modules/**"
+    ]
+  },
+  "rules": {
+    "space-before-function-paren": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "trailing-comma": false,
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ],
+    "eofline": false,
+    "no-string-literal": false,
+    "interface-name": false,
+    "no-console": false,
+    "no-namespace": false,
+    "one-variable-per-declaration": false,
+    "no-debugger": false,
+    "no-var-requires": false,
+    "jsx-no-lambda": false
+
+  }
+}
