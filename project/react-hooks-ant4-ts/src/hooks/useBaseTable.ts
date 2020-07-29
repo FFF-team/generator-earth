@@ -26,10 +26,12 @@ export function useBaseTable(
         total,
         // 若传入currentPage可以使table初始展示在第几页
         currentPage,
-        pageSize = 10,
+        pageSize,
     }: IProps = {}
 ): [PaginationConfig, (pagination: PaginationConfig) => Promise<void>] {
-    const [current, setCurrent] = useState<number | undefined>(currentPage)
+    const [current, setCurrent] = useState<number | undefined>(currentPage || 1)
+    const [size, setSize] = useState<number | undefined>(pageSize || 10)
+
     /**
      * 分页，排序，筛选回调
      * 目前需求仅为分页
@@ -41,15 +43,17 @@ export function useBaseTable(
         // 提交表单最好新一个事务，不受其他事务影响
         await sleep()
 
-        const current = pagination.current
+        const { current: newCurrent, pageSize: newSize } = pagination
 
         updateTable && updateTable({
             ...formData,
-            [CURRENT_PAGE]: current //pagination选中另一页面
-        })
+            [PAGE_SIZE]: newSize,
+            [CURRENT_PAGE]: newCurrent //pagination选中另一页面
+        });
 
         // 作用于没有传formData情况
-        setCurrent(current)
+        (currentPage !== undefined) && setCurrent(current);
+        (pageSize !== undefined) && setSize(pageSize);
     }
 
 
@@ -61,11 +65,12 @@ export function useBaseTable(
     * antd.pagination {pageSize, current, total}
     */
     const pagination: PaginationConfig = useMemo(() => ({
-        showTotal: (total, range) => `${range[0]}-${range[1]} (共${total}条)`,
-        pageSize: formData[PAGE_SIZE] || pageSize,
+        showTotal: (total, range) => `${range[0] || 0}-${range[1] || 0} (共${total || 0}条)`,
+        pageSize: formData[PAGE_SIZE] || size,
         total: formData[TOTAL] || total,
         current: formData[CURRENT_PAGE] || current,
-    }), [formData, total, pageSize, current])
+        showSizeChanger: true,
+    }), [formData, total, size, current])
 
 
     return [pagination, onTableChange]

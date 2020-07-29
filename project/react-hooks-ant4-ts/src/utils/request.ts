@@ -95,8 +95,8 @@ export const DEFAULT_HEADERS = {
     'cache-control': 'no-cache',
     'X-Requested-With': 'Fetch',
     'Content-Type': isPostTypeJson() ?
-        'application/json charset=utf-8' :
-        'application/x-www-form-urlencoded charset=utf-8',
+        'application/json; charset=utf-8' :
+        'application/x-www-form-urlencoded; charset=utf-8',
     'Accept': 'application/json',
 }
 
