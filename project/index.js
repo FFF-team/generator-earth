@@ -448,6 +448,23 @@ module.exports = class extends Generator {
                     }
                 );
 
+                this.fs.copyTpl(
+                    this.templatePath(`./.babelrc.js`),
+                    outPutUrl + '.babelrc.js'
+                );
+                this.fs.copyTpl(
+                    this.templatePath(`./.env.development`),
+                    outPutUrl + '.env.development'
+                );
+                this.fs.copyTpl(
+                    this.templatePath(`./.env.production`),
+                    outPutUrl + '.env.production'
+                );
+                this.fs.copyTpl(
+                    this.templatePath(`./.gitignore`),
+                    outPutUrl + '.gitignore'
+                );
+
 
                 break;
 
