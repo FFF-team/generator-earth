@@ -134,16 +134,6 @@ module.exports = class extends Generator {
             message: '框架选型',
             type: 'list',
             choices: [
-                // jiajianrong 20190516 不再提供单页
-                /*{
-                    name: 'React-ant',
-                    value: 'react-ant'
-                }, */
-                // jiajianrong 20200122 不再提供js
-                /*{
-                    name: 'React-ant-multi-pages',
-                    value: 'react-ant-multi-pages'
-                }, */
                 {
                     name: 'React-ant-ts',
                     value: 'react-ant-ts'
@@ -432,7 +422,36 @@ module.exports = class extends Generator {
 
                 break;
 
+
+            // react-ant-ts不再需要任何额外拷贝
+            // jiajianrong 2020-8-1
             case 'react-ant-ts':
+
+            
+                tplFile = `${this.frameType}`;
+
+                tplPath = this.templatePath(`../${tplFile}`);
+
+                this.fs.copyTpl(
+                    tplPath,
+                    outPutUrl,
+                    {
+                        name: this.name,
+                        author: this.author,
+                        frameType: this.frameType,
+                        email: this.email,
+                        version: this.version,
+                        desc: this.desc,
+                        groupName: this.groupName,
+                        resetCss: '',
+                        flexibleStr: ''
+                    }
+                );
+
+
+                break;
+
+
             case 'react-hooks-ant4-ts':
             case 'react-ant-mobx-ts':
 
