@@ -1,10 +1,9 @@
 {
-  "name": "pc-demo",
+  "name": "react-pc-project",
   "version": "1.0.0",
-  "private": true,
   "author": {
-    "name": "jiajianrong",
-    "email": "abc@598.com"
+    "name": "",
+    "email": "a@b.cd"
   },
   "repository": {
     "type": "git",
