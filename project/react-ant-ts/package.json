@@ -4,18 +4,17 @@
   "private": true,
   "author": {
     "name": "jiajianrong",
-    "email": "abc@588.com"
+    "email": "abc@598.com"
   },
   "repository": {
     "type": "git",
-    "url": "http://gitlab.xxx.com/groups/FFF-team/pc-demo"
+    "url": "https://github.com/FFF-team/generator-earth/tree/master/project/react-ant-ts"
   },
   "group": "FFF-team",
   "type": "react-ant-multi-pages",
   "keywords": [
     "earth",
-    "react",
-    "pc-demo"
+    "react-pc"
   ],
   "dependencies": {
     "antd": "3.24.0",
@@ -37,18 +36,11 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-redux": "^7.1.2",
     "@types/react-router-dom": "^4.3.4",
-    "earth-scripts": "^3.0.0"
+    "earth-pc-scripts": "^2.1.1"
   },
   "scripts": {
-    "start": "earth-scripts start",
-    "build": "earth-scripts build",
-    "update": "earth-scripts update",
-    "test": "earth-scripts test --env=jsdom",
-    "mock": "earth-scripts mock"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "mockRoot": "mock_server.js",
-  "proxy=>moved-to-/src/setupProxy.js": "http://127.0.0.1:8004"
+    "start": "earth-pc-scripts start",
+    "build": "earth-pc-scripts build",
+    "mock": "node ./mock/mock_server.js"
+  }
 }
