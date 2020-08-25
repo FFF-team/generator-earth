@@ -427,7 +427,7 @@ module.exports = class extends Generator {
             // jiajianrong 2020-8-1
             case 'react-ant-ts':
 
-            
+
                 tplFile = `${this.frameType}`;
 
                 tplPath = this.templatePath(`../${tplFile}`);
@@ -448,21 +448,11 @@ module.exports = class extends Generator {
                     }
                 );
 
-                this.fs.copyTpl(
-                    this.templatePath(`./.babelrc.js`),
-                    outPutUrl + '.babelrc.js'
-                );
-                this.fs.copyTpl(
-                    this.templatePath(`./.env.development`),
-                    outPutUrl + '.env.development'
-                );
-                this.fs.copyTpl(
-                    this.templatePath(`./.env.production`),
-                    outPutUrl + '.env.production'
-                );
-                this.fs.copyTpl(
-                    this.templatePath(`./.gitignore`),
-                    outPutUrl + '.gitignore'
+
+                // Copy all dotfiles
+                this.fs.copy(
+                    this.templatePath(`../${tplFile}/.*`),
+                    outPutUrl
                 );
 
 
@@ -523,19 +513,10 @@ module.exports = class extends Generator {
                     }
                 );
 
-                this.fs.copyTpl(
-                    this.templatePath(`./.eslintignore`),
-                    outPutUrl + '.eslintignore'
-                );
-
-                this.fs.copyTpl(
-                    this.templatePath(`./.eslintrc.js`),
-                    outPutUrl + '.eslintrc.js'
-                );
-
-                this.fs.copyTpl(
-                    this.templatePath(`./.gitignore`),
-                    outPutUrl + '.gitignore'
+                // Copy all dotfiles
+                this.fs.copy(
+                    this.templatePath(`../${tplFile}/.*`),
+                    outPutUrl
                 );
 
                 break;
