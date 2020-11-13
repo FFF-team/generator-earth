@@ -6,9 +6,11 @@ import { TableProps, ColumnProps } from 'antd/lib/table'
 import BaseContainer from 'ROOT_SOURCE/base/BaseContainer'
 
 
+
 interface ITableRecord {
     id: string,
 }
+
 
 interface ITableProps4List extends TableProps<ITableRecord> {
     updateTable : (params?: any) => any,
@@ -16,41 +18,30 @@ interface ITableProps4List extends TableProps<ITableRecord> {
 }
 
 
+
 export default class extends BaseContainer<ITableProps4List> {
     
     getColumns(): ColumnProps<ITableRecord>[] {
         return [{
-                title: '资产方编号',
+                title: '编号',
                 dataIndex: 'assetCode',
                 key: 'assetCode'
             }, {
-                title: '资产方名称',
+                title: '名称',
                 dataIndex: 'assetName',
                 key: 'assetName'
             }, {
-                title: '签约主体',
+                title: '主体',
                 dataIndex: 'contract',
                 key: 'contract'
             }, {
-                title: '签约时间',
+                title: '时间',
                 dataIndex: 'contractDate',
                 key: 'contractDate'
-            }, {
-                title: '联系人',
-                dataIndex: 'contacts',
-                key: 'contacts'
-            }, {
-                title: '联系电话',
-                dataIndex: 'contactsPhone',
-                key: 'contactsPhone'
             }, {
                 title: '创建时间',
                 dataIndex: 'createDate',
                 key: 'createDate'
-            }, {
-                title: '操作人',
-                dataIndex: 'operator',
-                key: 'operator'
             }, {
                 title: '操作',
                 key: 'action',
@@ -89,7 +80,7 @@ export default class extends BaseContainer<ITableProps4List> {
             <div className="ui-background clearfix">
                 <Table
                     title={()=>''}
-                    rowKey={(record, index)=>index+''}
+                    rowKey={(record)=>record.id}
                     dataSource={this.props.tableData.dataSource}
                     columns={this.getColumns()}
                     pagination={false}

@@ -12,7 +12,7 @@ import BaseContainer from './BaseContainer'
 export type IDefaultTableProps = {
     updateTable: (params?: any) => any,
     resetTable? : Function,
-    formData?: any,
+    formData: any,
     tableData: {dataSource?: Array<any>, [propName: string]: any},
 }
 
@@ -52,8 +52,9 @@ BaseContainer<ITableProps4List<TExtraTableProps, Record>> {
      * table row唯一标识字段
      * @override
      */
-    getRowKey(record: Record, index: number): string {
-        return index+''
+    getRowKey(record: Record): string {
+        //@ts-ignore
+        return record.id
         //throw new Error('getRowKey must be overriden to return a string')
     }
     

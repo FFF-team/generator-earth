@@ -138,10 +138,13 @@ module.exports = class extends Generator {
                     name: 'React-ant-ts',
                     value: 'react-ant-ts'
                 },
-                {
-                    name: 'React-hooks-ant4-ts',
-                    value: 'react-hooks-ant4-ts'
-                },
+                // 20201113 jiajianrong
+                // hide liuduan's project
+                // use react-ant-ts instead
+                // {
+                //     name: 'React-hooks-ant4-ts',
+                //     value: 'react-hooks-ant4-ts'
+                // },
                 {
                     name: 'React-ant-mobx-ts',
                     value: 'react-ant-mobx-ts'

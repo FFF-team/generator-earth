@@ -1,5 +1,7 @@
 {
     "code": 0,
     "msg": "post成功",
-    "data": {}
+    "data": {
+		"status": "ok"
+	}
 }

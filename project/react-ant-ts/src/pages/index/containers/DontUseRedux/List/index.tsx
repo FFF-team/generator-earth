@@ -15,13 +15,12 @@ import {RESPONSE_DESTRUST_KEY, RESPONSE_LIST_DESTRUST_KEY } from 'ROOT_SOURCE/ba
  * 由于未使用redux，List页跳转到Item页后，
  * 再跳转回来时是空白List页：未能获取之前的formData和tableTable
  */
-export default class extends BaseContainer<RouteComponentProps, {formData: any, tableData: any}> {
+export default class extends BaseContainer<RouteComponentProps, {tableData: any}> {
     
     constructor(props: RouteComponentProps) {
         super(props)
 
         this.state = {
-            formData: {},
             tableData: {
                 dataSource: [],
             },
@@ -32,17 +31,9 @@ export default class extends BaseContainer<RouteComponentProps, {formData: any, 
     /**
      * 更新table，会被form container和table container都调用
      */
-    updateTable = async (params?: any) => {
-
-        // 更新state
-        if (params) {
-            this.setState({formData: params})
-        }
-
-        // 提交表单最好新一个事务，不受其他事务影响
-        await this.sleep()
+    updateTable = async (params={}) => {
         
-        let result = await request.post('/asset/getAsset', this.state.formData)
+        let result = await request.post('/asset/getAsset', params)
         
         if (!result) { return; }
         

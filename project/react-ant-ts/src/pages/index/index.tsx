@@ -7,17 +7,17 @@ import store from 'ROOT_SOURCE/utils/store'
 
 import App from './App'
 
-import { LocaleProvider } from 'antd';
-import zhCN from 'antd/lib/locale-provider/zh_CN';
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
 
 ReactDOM.render(
-    <LocaleProvider locale={zhCN}>
+    <ConfigProvider locale={zhCN}>
         <Provider store={store}>
             <HashRouter>
                 <Route component={App} />
             </HashRouter>
         </Provider>
-    </LocaleProvider>
+    </ConfigProvider>
     ,
     document.getElementById('root')
 )
