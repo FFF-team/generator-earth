@@ -10,6 +10,9 @@
     "update"
   ],
   "main": "app/index.js",
+  "scripts": {
+    "start": "npm link && yo earth"
+  },
   "dependencies": {
     "colors": "^1.1.2",
     "inquirer": "^6.2.2",
