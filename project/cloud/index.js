@@ -129,7 +129,9 @@ app.use(async (ctx, next) => {
 
 
 
-app.listen(8001).on('clientError', (err, socket) => {
+let httpServer = app.listen(8001).on('clientError', (err, socket) => {
     logger.error('caught_by_koa_on_client_error', err);
     socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
 });
+
+module.exports = httpServer;
