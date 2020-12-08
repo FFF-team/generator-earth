@@ -1,12 +1,13 @@
 {
   "name": "nodeapp",
   "scripts": {
-    "dev": "node index.js",
+    "dev": "nodemon index.js",
     "start": "pm2 start index.js --name=nodeapp",
     "stop":  "pm2 stop nodeapp",
     "detect":"pm2 show nodeapp",
-    "arthur-start": "pm2 start index.js -i 2 --name=nodeapp",
-    "arthur-stop": "pm2 stop nodeapp"
+    "arthur-start": "pm2 start index.js -i 2 --name=nodeapp --output=/dev/null",
+    "arthur-stop": "pm2 stop nodeapp",
+    "test": "jest --forceExit --detectOpenHandles --coverage --passWithNoTests"
   },
   "dependencies": {
     "http-proxy": "^1.17.0",
@@ -18,5 +19,15 @@
     "moment": "^2.22.2",
     "winston": "^3.1.0",
     "winston-daily-rotate-file": "^3.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "heapdump": "^0.3.15",
+    "nodemon": "^1.18.4",
+    "supertest": "^6.0.1",
+    "jest": "^26.6.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
