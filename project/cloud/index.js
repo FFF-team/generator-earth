@@ -4,13 +4,14 @@ const koaStatic = require('koa-static');
 
 const { GATEWAY_SERVER, LOG_DIR } = require('./config');
 
-const { RTN_CODE } = require('./utils/constants');
+const { RTN_CODE, CSRF_WHITE_LIST } = require('./utils/constants');
 const logger = require('./utils/logger')(LOG_DIR);
 const proxyToJava = require('./utils/proxy');
 
 const performance = require('./utils/mw-performance');
 const filterFavicon = require('./utils/mw-favicon');
 const heartbeat = require('./utils/mw-heartbeat');
+const csrf = require('./utils/mw-csrf');
 
 
 
@@ -95,6 +96,8 @@ app.use(async (ctx, next) => {
     await next();
 });
 
+
+app.use(csrf(CSRF_WHITE_LIST));
 
 // 代理相关异步请求
 app.use(async (ctx, next) => {

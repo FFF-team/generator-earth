@@ -7,6 +7,13 @@
 npm run start
 ```
 
+###### 项目调试
+```
+npx --node-arg=--inspect yo earth
+```
+
+需要调试的代码前加```debugger;```
+
 
 ## 使用步骤
 
