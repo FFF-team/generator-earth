@@ -243,7 +243,6 @@ module.exports = class extends Generator {
         }*/];
 
         self.prompt(prompts).then(answer => {
-
             self.projectType = answer.projectType;
             self.frameType = answer.frameType;
             self.name = answer.projectName;
@@ -333,6 +332,13 @@ module.exports = class extends Generator {
                         groupName: this.groupName
                     }
                 );
+
+                // Copy all dotfiles
+                this.fs.copy(
+                    this.templatePath(`../${tplFile}/.*`),
+                    outPutUrl
+                );
+                break;
 
 
             case 'react':

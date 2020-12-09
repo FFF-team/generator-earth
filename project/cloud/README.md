@@ -7,4 +7,4 @@
 
 ## Step2
 
-执行 `npm run dev` 或  `node index.js`
+执行 `npm run dev` 或  `nodemon index.js`
