@@ -5,20 +5,24 @@
  * ppu存在：获取 http header x-csrf-token,判断x-csrf-token与ppu是否相同：是则认为通过校验
  * 否则拒绝服务
  */
-module.exports = function(csrfWhiteList) {
+module.exports = function (csrfWhiteList) {
     return async function csrf(ctx, next) {
         let method = ctx.request.method;
 
         if (method !== 'POST') {
-          await next();
+            await next();
         } else if (csrfWhiteList.includes(ctx.request.path)) {
-          await next();
+            await next();
         } else if (ctx.cookies.get('PPU') === undefined) {
-          await next();
+            await next();
         } else if (ctx.request.get('x-csrf-token') === ctx.cookies.get('PPU')) {
-          await next();
+            await next();
         } else {
-          return ctx.throw(401, 'access_denied');
+            //   return ctx.throw(401, 'access_denied');
+            ctx.body = {
+                code: '401',
+                msg: 'csrf_access_denied'
+            }
         }
     }
 };
