@@ -22,7 +22,7 @@
         "lodash": "4.17.5",
         "mobx": "^5.9.4",
         "mobx-react": "^5.4.3",
-        "moment": "2.22.1",
+        "moment": "2.29.4",
         "prop-types": "15.5.10",
         "query-string": "5.1.1",
         "react": "16.8.6",
